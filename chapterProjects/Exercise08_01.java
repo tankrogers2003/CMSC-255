@@ -41,18 +41,16 @@ public class Exercise08_01 {
 
         //display desired output
         System.out.println("Sum of the elements at column 0 is " + sumColumn(inputArray, 0));
-        System.out.println("Sum of the elements at column 0 is " + sumColumn(inputArray, 1));
-        System.out.println("Sum of the elements at column 0 is " + sumColumn(inputArray, 2));
-
-        int[] a = {1, 3, 5};
+        System.out.println("Sum of the elements at column 1 is " + sumColumn(inputArray, 1));
+        System.out.println("Sum of the elements at column 2 is " + sumColumn(inputArray, 2));
+        System.out.println("Sum of the elements at column 3 is " + sumColumn(inputArray, 3));
     }
     public static double sumColumn(double[][] m, int columnIndex) {
-        //we need to take the array and columnIndex and return the sum
-        //1. for loop of array at column index for i < length-1 of column
-        //2. return sum
-        
-        //loop through array until 
-        for (int i = 0; i < m[i+1][columnIndex-1]; )
-    }        
-
+        double total = 0;
+        //loop through array until we reach the last column. user inputted column location, not length.
+        for (int i = 0; i < 3; i++){
+            total += m[i][columnIndex];
+        }
+        return total;
+    }
 }
