@@ -44,9 +44,15 @@ public class Exercise08_01 {
         System.out.println("Sum of the elements at column 0 is " + sumColumn(inputArray, 1));
         System.out.println("Sum of the elements at column 0 is " + sumColumn(inputArray, 2));
 
+        int[] a = {1, 3, 5};
     }
     public static double sumColumn(double[][] m, int columnIndex) {
+        //we need to take the array and columnIndex and return the sum
+        //1. for loop of array at column index for i < length-1 of column
+        //2. return sum
         
+        //loop through array until 
+        for (int i = 0; i < m[i+1][columnIndex-1]; )
     }        
 
 }
