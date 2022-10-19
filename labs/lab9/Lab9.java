@@ -31,6 +31,13 @@ public class Lab9 {
               //if -1 is found mine. increment all elements surrounding unless except -1 (isBomb()) or out of bounds(isInBounds())
               if (array[r][col] == -1) {
                   //increment surrounding values. how do I incorporate isBomb() isInBounds()?
+                  for (int i = r - 1; i <= r + 1; i++) {
+                      for (int c = col - 1; c <= col + 1; c++) {
+                          if (isInBounds(i, c, array) && !isBomb(array[i][c])){
+                              array[i][c]++;
+                          }
+                      }
+                  }
               }
           }
       }
