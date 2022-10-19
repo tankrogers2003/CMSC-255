@@ -1,38 +1,39 @@
 
 public class Lab9 {
   public static void addTo10(int [][] array) {
-      int sum = 0;
-      int r, col;
-      int zero;
-      // r is row number we are manipulating. then, we test for each to the end of the column.
-      for (r = 0; r < array[r][array.length-1]; r++) {
-
-          //increment columns loop;keep constant row, change column - w/o out of bounds.
-          for (col = 0; r < array[r][array.length-1]; col++) {
-              sum += array[r][col];
-          }
-
-          //find location of 0 separately, can't interfere w/ sum.
-          for (col = 0; r < array[r][array.length-1]; col++) {
-              zero = array[r][col];
-
-              //finding if incrementing or decrementing zero is needed and looping until sum = 10;
-              while (sum != 10) {
-                  if (sum < 10) {
-                      zero++;
-                  } else {
-                      zero--;
-                  }
-              }
-
-              //break to prevent running the loop again
-              break;
-          }
-      }
+    for (int r = 0; r < array.length; r++) {
+        int zero = -1;
+        int sum = 0;
+        //increment columns
+        for (int col = 0; col < array[r].length; col++) {
+            sum += array[r][col];
+            //finding zero
+            if (array[r][col] == 0) {
+                zero = col;
+            }
+        }
+        //summing to 10
+        array[r][zero] = 10 - sum;
+        //printing each element
+        for (int col = 0; col < array[r].length; col++) {
+            System.out.print(array[r][col] + " ");
+        }
+        //print a line
+        System.out.println();
+    }
   }
    
   public static void setHints(int [][] array) {
-
+      //walk through array row by row
+      for (int r = 0; r < array.length; r++) {
+          //go through each col in row
+          for (int col = 0; col < array[r].length; col++) {
+              //if -1 is found mine. increment all elements surrounding unless except -1 (isBomb()) or out of bounds(isInBounds())
+              if (array[r][col] == -1) {
+                  //increment surrounding values. how do I incorporate isBomb() isInBounds()?
+              }
+          }
+      }
   }
    
   public static boolean isInBounds(int i, int j, int[][] board){
