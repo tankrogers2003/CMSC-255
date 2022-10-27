@@ -24,10 +24,22 @@ public class MoonSamples {
        String[] splitString = InputElementString.split(",");
        return splitString;
     }
-    /* public static double[][] getSamples(String inputSamplesString){
+    //Return to. Struggling with this one
+    /*public static double[][] getSamples(String inputSamplesString){
         String[] arrayString = inputSamplesString.split("<>");
-        //<resulting String>.split(",");
-
+        //split arrayString into its individual elements
+        String[] elementsString = inputSamplesString.split(",");
     }*/
+    public static int[] searchForLife(double [][] samples){
+        //match elements to samples
 
+        //sum each element's samples
+
+        //plug into the formula for life
+        int formulaForLife = (8*carbonDioxideTotal) + (2*magnesiumTotal) + sodiumTotal + (4*potassiumTotal) + chlorideTotal + (5*waterTotal);
+    
+        if (formulaForLife >= 300) {
+            //return "sample number"?
+        }
+    }
 }
