@@ -26,7 +26,6 @@ public class Lab11 {
         /**
          * enhanced for loop to display contents of book objects in books ArrayList
          */
-        //ask TA
         for (Book newBook : bkS1.getBooks()) {
             System.out.println(newBook.getAuthor() + "," + newBook.getTitle());
         }
@@ -34,7 +33,6 @@ public class Lab11 {
         /**
          * empty bookshelf and print results
          */
-        //ask TA
         bkS1.emptyBookshelf();
         bkS1.print();
     }

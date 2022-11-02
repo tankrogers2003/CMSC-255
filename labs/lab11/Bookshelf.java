@@ -70,7 +70,7 @@ public class Bookshelf {
     /**
      * A public void method emptyBookshelf, which takes no parameters and removes all of the books from the bookshelf (empties the books ArrayList).
      */
-    public void emptyBookshelf(){
+    public void emptyBookshelf() {
         books.clear();
     }
 }
