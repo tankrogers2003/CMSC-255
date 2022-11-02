@@ -13,9 +13,25 @@ import java.util.Scanner;
 
 public class MoonSamples {
     public static void main(String[] args) {
-        /**create input*/
+        /**create input and take in strings*/
         Scanner input = new Scanner(System.in);
+        System.out.println("Enter elements: ");
+        String elements = input.next();
+        System.out.println("Enter corresponding samples: ");
+        String samples = input.next();
 
+        /** pass strings into methods */
+        String[] elementsArray = getElements(elements);
+        double[][] samplesArray = getSamples(samples);
+
+        /** call searchforlife() passing in getSamples results */
+        System.out.println(searchForLife(samplesArray));
+
+        /** call searchHighestElements() passing in samplesArray, print results. NOTE: Sample Number not given. I entered 2 for fun */
+        System.out.println(searchHighestElements(samplesArray, elementsArray, 2));
+
+        /** Call searchHighestSample(), passing in the results of getSamples() and getElements() and print the result */
+        searchHighestSample(samplesArray, elementsArray, "water");
         String inputString = "8.3,4.5,6.7,2.3,12.5,4.5<>3.9,1.8,34.7,23.5,1.2,14.3<>6.7,7.4,1.5,18.4,7.2,23.7<>23.4,5.6,2.9,18.5,39.5,18.2<>15.4,5.3,27.4,9.8,3.8,27.4";
 
     }
