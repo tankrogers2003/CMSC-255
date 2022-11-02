@@ -15,6 +15,9 @@ public class MoonSamples {
     public static void main(String[] args) {
         /**create input*/
         Scanner input = new Scanner(System.in);
+
+        String inputString = "8.3,4.5,6.7,2.3,12.5,4.5<>3.9,1.8,34.7,23.5,1.2,14.3<>6.7,7.4,1.5,18.4,7.2,23.7<>23.4,5.6,2.9,18.5,39.5,18.2<>15.4,5.3,27.4,9.8,3.8,27.4";
+
     }
     public static String[] getElements(String InputElementString){
        String[] splitString = InputElementString.split(",");
@@ -101,5 +104,23 @@ public class MoonSamples {
         /** return string Elements =  highestElement + " " + secondHighestElement */
         return highestElement + " " + secondHighestElement;
     }
-    
+    public static int searchHighestSample(double [][] samples, String[] elements, String element) {
+        /** you are given an element. element correspond to column. check highest value in column. return row */
+        /** find what column the element corresponds to */
+        int elementColumn = 0;
+        for (int i = 0; i < elements.length; i++) {
+            if (elements[i] == element) {
+                elementColumn = i;
+            }
+        }
+        /** find the highest value of the samples in that column & return that row number*/
+        double highestValue = samples[0][0];
+        int highestValueLocation = 0;
+        for (int i = 0; i < samples.length; i++) {
+            if (samples[i][elementColumn] > highestValue) {
+                highestValueLocation = i;
+            }
+        }
+        return highestValueLocation;
+    }
 }
