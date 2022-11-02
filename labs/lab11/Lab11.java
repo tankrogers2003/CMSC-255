@@ -36,10 +36,6 @@ public class Lab11 {
          */
         //ask TA
         bkS1.emptyBookshelf();
-        for (Book newBook : bkS1.getBooks()) {
-            System.out.println(newBook.getAuthor() + "," + newBook.getTitle());
-        }
-
-        System.out.println(bkS1.toString());
+        bkS1.print();
     }
 }

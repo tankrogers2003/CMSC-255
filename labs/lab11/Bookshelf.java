@@ -50,9 +50,7 @@ public class Bookshelf {
      * A method which takes a single book parameter and adds it to the books ArrayList if there is room on the bookshelf.
      */
     public void addBook(Book book){
-        //confused on max number of books
-        //ask TA
-        if(books.size() < Bookshelf().size){
+        if(books.size() < size){
             books.add(book);
         }
     }
