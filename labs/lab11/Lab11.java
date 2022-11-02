@@ -11,9 +11,9 @@ public class Lab11 {
         /**
          * print data from books
          */
-        System.out.println(b1.getAuthor() + ", " + b1.getTitle());
-        System.out.println(b2.getAuthor() + ", " + b2.getTitle());
-        System.out.println(b3.getAuthor() + ", " + b3.getTitle());
+        System.out.println(b1.toString());
+        System.out.println(b2.toString());
+        System.out.println(b3.toString());
 
         /**
          * create bookshelf object with three book objects in it
@@ -27,7 +27,7 @@ public class Lab11 {
          * enhanced for loop to display contents of book objects in books ArrayList
          */
         for (Book newBook : bkS1.getBooks()) {
-            System.out.println(newBook.getAuthor() + "," + newBook.getTitle());
+            System.out.println(newBook.toString());
         }
 
         /**
