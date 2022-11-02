@@ -68,6 +68,7 @@ public class MoonSamples {
          * inside the loop, have an if statement to check if > 300.
          * if > 300, place the sample number (row) into a new array. **/
         int[] lifeSamples = new int[0];
+        int j = 0;
         for (int i = 0; i < samples.length; i++) {
             /** declare and intialize variable used in formulaForLife function*/
             double carbonDioxide = samples[i][0];
@@ -79,8 +80,7 @@ public class MoonSamples {
             double formulaForLife = (8 * carbonDioxide) + (2 * magnesium) + sodium + (4 * potassium) + chloride + (5 * water);
             /** creating new array to samples that pass */
             if (formulaForLife >= 300) {
-                int j = 0;
-                while (j < samples.length) {
+                for (j = j; j < samples.length;){
                     lifeSamples[j] = i;
                     j++;
                     break;
@@ -118,7 +118,7 @@ public class MoonSamples {
         String secondHighestElement = elements[secondHighestLocation];
 
         /** return string Elements =  highestElement + " " + secondHighestElement */
-        return highestElement + " " + secondHighestElement;
+        return highestElement + " and " + secondHighestElement;
     }
     public static int searchHighestSample(double [][] samples, String[] elements, String element) {
         /** you are given an element. element correspond to column. check highest value in column. return row */

@@ -2,8 +2,6 @@
 
 import org.junit.*;
 import org.junit.rules.Timeout;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertEquals;
 
