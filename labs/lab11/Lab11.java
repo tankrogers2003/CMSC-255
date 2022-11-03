@@ -18,7 +18,7 @@ public class Lab11 {
         /**
          * create bookshelf object with three book objects in it
          */
-        Bookshelf bkS1 = new Bookshelf();
+        Bookshelf bkS1 = new Bookshelf(3);
         bkS1.addBook(b1);
         bkS1.addBook(b2);
         bkS1.addBook(b3);
@@ -34,6 +34,8 @@ public class Lab11 {
          * empty bookshelf and print results
          */
         bkS1.emptyBookshelf();
-        bkS1.print();
+        for (Book newBook : bkS1.getBooks()) {
+            System.out.println(newBook.toString());
+        }
     }
 }
