@@ -1,3 +1,12 @@
+/*
+ * Card.java
+ *
+ * Lab 12; a general "card"
+ *
+ * Thomas Rogers
+ * 11/10/2022
+ * CMSC-255
+ */
 public class Card {
 
     //instance variable
